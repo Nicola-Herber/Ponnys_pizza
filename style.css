@@ -972,9 +972,9 @@ button[type="submit"]:focus-visible {
 .insta-popup {
   position: fixed;
   right: 1rem;
-  bottom: 50px;
+  bottom: 1rem;
   z-index: 60;
-  width: min(320px, calc(100vw - 2rem));
+  width: min(250px, calc(100vw - 2rem));
   border: 2px solid #4a3628;
   border-radius: 16px;
   background: #1b1512;
@@ -1013,15 +1013,15 @@ button[type="submit"]:focus-visible {
 
 .insta-popup-close {
   position: absolute;
-  top: 0.35rem;
-  right: 0.45rem;
+  top: 0.4rem;
+  right: 0.4rem;
   border: 0;
   background: transparent;
   color: #d8c0a5;
-  font-size: 1.05rem;
+  font-size: 1.45rem;
   line-height: 1;
   cursor: pointer;
-  padding: 0.25rem;
+  padding: 0.35rem;
 }
 
 .insta-popup-close:hover,
