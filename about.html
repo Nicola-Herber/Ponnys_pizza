@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ponny's Pizza | Il Nostro Chef</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="menu.js" defer></script>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header container">
+        <a class="logo-wrap" href="index.html" aria-label="Torna alla home di Ponny's Pizza">
+          <img
+            class="logo-img"
+            src="assets/imgs/Logo_dark_v2.png"
+            alt="Ponny's Pizza — PROVALA, FIDATI!"
+            width="320"
+            height="160"
+            onerror="this.classList.add('is-hidden'); this.nextElementSibling.classList.remove('is-hidden');"
+          />
+          <div class="logo-placeholder is-hidden" aria-hidden="true">Logo non trovato</div>
+        </a>
+        <nav class="main-nav" aria-label="Navigazione principale">
+          <a class="nav-link" href="index.html">Il Menù</a>
+          <a class="nav-link" href="index.html#galleria">Galleria</a>
+          <a class="nav-link active" href="about.html">Contattaci</a>
+        </nav>
+        <div class="mobile-nav">
+          <button
+            class="mobile-nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="mobile-nav-popup"
+            aria-label="Apri menu di navigazione"
+          >
+            <span class="hamburger-icon" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </button>
+          <div class="mobile-nav-popup" id="mobile-nav-popup" role="menu" aria-label="Seleziona pagina">
+            <a class="mobile-nav-link" href="index.html" role="menuitem">Il Menù</a>
+            <a class="mobile-nav-link" href="index.html#galleria" role="menuitem">Galleria</a>
+            <a class="mobile-nav-link active" href="about.html" role="menuitem">Contattaci</a>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <h1 class="visually-hidden">Ponny's Pizza — Il nostro chef</h1>
+        <section class="chef-section container section-spacing">
+          <h2 class="section-title"><span>INCONTRA LO CHEF</span></h2>
+          <div class="chef-layout">
+            <div class="chef-image-wrap">
+              <img
+                class="chef-image"
+                src="assets/imgs/Chef_ponny.png"
+                alt="Ritratto dello chef Ponny"
+                width="520"
+                height="520"
+                onerror="this.classList.add('is-hidden'); this.nextElementSibling.classList.remove('is-hidden');"
+              />
+              <div class="chef-image placeholder-box is-hidden" role="img" aria-label="Placeholder ritratto chef 520x520">
+                Placeholder ritratto chef 520x520
+              </div>
+            </div>
+            <article class="chef-bio">
+              <h3>Chef Ponny</h3>
+              <p>
+                Ti é piaciuta la pizza? Stai organizzando la tua festa o vuoi uno chef per una serata tra amici? Contattaci! 
+                Siamo pronti a venire alla tua festa per prepararti la tua pizza preferita! 
+              </p>
+              <p>
+                Tu dicci dove, quando e quante persone ci aspettano e noi pensiamo al resto!
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="contact-section container section-spacing">
+          <h2 class="section-title"><span>CONTATTACI PER IL TUO PROSSIMO EVENTO!</span></h2>
+          <form class="contact-form contact-form--compact" data-mailto-form data-mailto="ponnypizzas@gmail.com">
+            <p class="contact-form-note">
+              Compila e invia: si aprira' la tua app Mail con il messaggio pronto. Ti risponderemo il prima possibile!
+            </p>
+
+            <label for="name">Nome</label>
+            <input id="name" name="name" type="text" placeholder="Il tuo nome" required />
+
+            <label for="message">Messaggio</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              placeholder="Raccontaci data, numero ospiti e preferenze..."
+              required
+            ></textarea>
+
+            <button type="submit">Apri Mail e Invia Richiesta</button>
+          </form>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container footer-inner">
+          <p>© 2026 Ponny's Pizza. Tutti i diritti riservati.</p>
+          <div class="social-links" aria-label="Social media">
+            <a href="https://www.instagram.com/ponny_pizza?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" aria-label="Instagram" target="_blank" rel="noopener noreferrer">Instagram</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

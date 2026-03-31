@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ponny's Pizza | Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="menu.js" defer></script>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header container">
+        <a class="logo-wrap" href="index.html" aria-label="Torna alla home di Ponny's Pizza">
+          <img
+            class="logo-img"
+            src="assets/imgs/Logo_dark_v2.png"
+            alt="Ponny's Pizza — PROVALA, FIDATI!"
+            width="320"
+            height="160"
+            onerror="this.classList.add('is-hidden'); this.nextElementSibling.classList.remove('is-hidden');"
+          />
+          <div class="logo-placeholder is-hidden" aria-hidden="true">Logo non trovato</div>
+        </a>
+        <nav class="main-nav" aria-label="Navigazione principale">
+          <a class="nav-link active" href="index.html">Il Menù</a>
+          <a class="nav-link" href="#galleria">Galleria</a>
+          <a class="nav-link" href="about.html">Contattaci</a>
+        </nav>
+        <div class="mobile-nav">
+          <button
+            class="mobile-nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="mobile-nav-popup"
+            aria-label="Apri menu di navigazione"
+          >
+            <span class="hamburger-icon" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </button>
+          <div class="mobile-nav-popup" id="mobile-nav-popup" role="menu" aria-label="Seleziona pagina">
+            <a class="mobile-nav-link active" href="index.html" role="menuitem">Il Menù</a>
+            <a class="mobile-nav-link" href="#galleria" role="menuitem">Galleria</a>
+            <a class="mobile-nav-link" href="about.html" role="menuitem">Contattaci</a>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <h1 class="visually-hidden">Ponny's Pizza</h1>
+        <section class="event-menu container section-spacing">
+          <h2 class="section-title"><span>PROVALA, FIDATI!</span></h2>
+          <p class="section-intro">
+            Ecco le nostre pizze per la festa di questa sera! Scegli la tua preferita! </p>
+
+          <div class="pizza-grid">
+            <article
+              class="pizza-card"
+              data-pizza-flip
+              tabindex="0"
+              aria-expanded="false"
+              aria-label="Margherita — clicca la scheda per vedere gli ingredienti"
+            >
+              <div class="pizza-flip-scene">
+                <div class="pizza-flip-inner">
+                  <div
+                    class="pizza-flip-face pizza-flip-back"
+                    id="ingredients-marg"
+                    role="region"
+                    aria-label="Ingredienti Margherita"
+                  >
+                    <h3>Margherita</h3>
+                    <ul class="ingredient-list">
+                      <li>Mozzarella</li>
+                      <li>Pomodoro</li>
+                    </ul>
+                  </div>
+                  <div class="pizza-flip-face pizza-flip-front">
+                    <h3 id="pizza-title-marg">Margherita</h3>
+                    <div
+                      class="pizza-menu-visual placeholder-box pizza-menu-photo"
+                      role="img"
+                      aria-label="Immagine pizza Margherita (da aggiungere)"
+                    >
+                      <img
+                        class="pizza-type-icon-in-photo"
+                        src="assets/imgs/Pizza_margherita_icon_v3.png"
+                        alt=""
+                        width="200"
+                        height="200"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div class="price-card">
+                      <table aria-label="Prezzi pizza Margherita in franchi svizzeri">
+                        <thead>
+                          <tr>
+                            <th scope="col">Taglia</th>
+                            <th scope="col">CHF</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><span class="size-icon icon-full" aria-hidden="true"></span>Intera</td>
+                            <td>12.–</td>
+                          </tr>
+                          <tr>
+                            <td><span class="size-icon icon-half" aria-hidden="true"></span>Mezza</td>
+                            <td>7.–</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="pizza-card"
+              data-pizza-flip
+              tabindex="0"
+              aria-expanded="false"
+              aria-label="Prosciutto — clicca la scheda per vedere gli ingredienti"
+            >
+              <div class="pizza-flip-scene">
+                <div class="pizza-flip-inner">
+                  <div
+                    class="pizza-flip-face pizza-flip-back"
+                    id="ingredients-pro"
+                    role="region"
+                    aria-label="Ingredienti Prosciutto"
+                  >
+                    <h3>Prosciutto</h3>
+                    <ul class="ingredient-list">
+                      <li>Mozzarella</li>
+                      <li>Pomodoro</li>
+                      <li>Prosciutto</li>
+                    </ul>
+                  </div>
+                  <div class="pizza-flip-face pizza-flip-front">
+                    <h3 id="pizza-title-pro">Prosciutto</h3>
+                    <div
+                      class="pizza-menu-visual placeholder-box pizza-menu-photo"
+                      role="img"
+                      aria-label="Immagine pizza Prosciutto (da aggiungere)"
+                    >
+                      <img
+                        class="pizza-type-icon-in-photo"
+                        src="assets/imgs/Pizza_prosciutto_icon_v3.png"
+                        alt=""
+                        width="200"
+                        height="200"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div class="price-card">
+                      <table aria-label="Prezzi pizza Prosciutto in franchi svizzeri">
+                        <thead>
+                          <tr>
+                            <th scope="col">Taglia</th>
+                            <th scope="col">CHF</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><span class="size-icon icon-full" aria-hidden="true"></span>Intera</td>
+                            <td>14.–</td>
+                          </tr>
+                          <tr>
+                            <td><span class="size-icon icon-half" aria-hidden="true"></span>Mezza</td>
+                            <td>8.–</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="pizza-card"
+              data-pizza-flip
+              tabindex="0"
+              aria-expanded="false"
+              aria-label="Salamino — clicca la scheda per vedere gli ingredienti"
+            >
+              <div class="pizza-flip-scene">
+                <div class="pizza-flip-inner">
+                  <div
+                    class="pizza-flip-face pizza-flip-back"
+                    id="ingredients-sal"
+                    role="region"
+                    aria-label="Ingredienti Salamino"
+                  >
+                    <h3>Salamino</h3>
+                    <ul class="ingredient-list">
+                      <li>Pomodoro</li>
+                      <li>Mozzarella</li>
+                      <li>Salame piccante</li>
+                    </ul>
+                  </div>
+                  <div class="pizza-flip-face pizza-flip-front">
+                    <h3 id="pizza-title-sal">Salamino</h3>
+                    <div
+                      class="pizza-menu-visual placeholder-box pizza-menu-photo"
+                      role="img"
+                      aria-label="Immagine pizza Salamino (da aggiungere)"
+                    >
+                      <img
+                        class="pizza-type-icon-in-photo"
+                        src="assets/imgs/Pizza_salame_icon_v3.png"
+                        alt=""
+                        width="200"
+                        height="200"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div class="price-card">
+                      <table aria-label="Prezzi pizza Salamino in franchi svizzeri">
+                        <thead>
+                          <tr>
+                            <th scope="col">Taglia</th>
+                            <th scope="col">CHF</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><span class="size-icon icon-full" aria-hidden="true"></span>Intera</td>
+                            <td>14.–</td>
+                          </tr>
+                          <tr>
+                            <td><span class="size-icon icon-half" aria-hidden="true"></span>Mezza</td>
+                            <td>8.–</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="pizza-card"
+              data-pizza-flip
+              tabindex="0"
+              aria-expanded="false"
+              aria-label="Marinara — clicca la scheda per vedere gli ingredienti"
+            >
+              <div class="pizza-flip-scene">
+                <div class="pizza-flip-inner">
+                  <div
+                    class="pizza-flip-face pizza-flip-back"
+                    id="ingredients-marin"
+                    role="region"
+                    aria-label="Ingredienti Marinara"
+                  >
+                    <h3>Marinara</h3>
+                    <ul class="ingredient-list">
+                      <li>Pomodoro</li>
+                    </ul>
+                  </div>
+                  <div class="pizza-flip-face pizza-flip-front">
+                    <h3 id="pizza-title-marin">Marinara</h3>
+                    <div
+                      class="pizza-menu-visual placeholder-box pizza-menu-photo pizza-menu-placeholder-only"
+                      role="img"
+                      aria-label="Immagine pizza Marinara (in arrivo)"
+                    >
+                    <img
+                    class="pizza-type-icon-in-photo"
+                    src="assets/imgs/Pizza_marinara_icon_v3.png"
+                    alt=""
+                    width="200"
+                    height="200"
+                    loading="lazy"
+                  />                    </div>
+                    <div class="price-card">
+                      <table aria-label="Prezzi pizza Marinara in franchi svizzeri">
+                        <thead>
+                          <tr>
+                            <th scope="col">Taglia</th>
+                            <th scope="col">CHF</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><span class="size-icon icon-full" aria-hidden="true"></span>Intera</td>
+                            <td>10.–</td>
+                          </tr>
+                          <tr>
+                            <td><span class="size-icon icon-half" aria-hidden="true"></span>Mezza</td>
+                            <td>5.–</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="pizza-card"
+              data-pizza-flip
+              tabindex="0"
+              aria-expanded="false"
+              aria-label="Focaccia — clicca la scheda per vedere gli ingredienti"
+            >
+              <div class="pizza-flip-scene">
+                <div class="pizza-flip-inner">
+                  <div
+                    class="pizza-flip-face pizza-flip-back"
+                    id="ingredients-foc"
+                    role="region"
+                    aria-label="Ingredienti Focaccia"
+                  >
+                    <h3>Focaccia</h3>
+                    <ul class="ingredient-list">
+                      <li>Olio</li>
+                      <li>Sale</li>
+                    </ul>
+                  </div>
+                  <div class="pizza-flip-face pizza-flip-front">
+                    <h3 id="pizza-title-foc">Focaccia</h3>
+                    <div
+                      class="pizza-menu-visual placeholder-box pizza-menu-photo pizza-menu-placeholder-only"
+                      role="img"
+                      aria-label="Immagine focaccia (in arrivo)"
+                    >
+                    <img
+                    class="pizza-type-icon-in-photo"
+                    src="assets/imgs/focaccia_icon_v3.png"
+                    alt=""
+                    width="200"
+                    height="200"
+                    loading="lazy"
+                  />                               </div>
+                    <div class="price-card">
+                      <table aria-label="Prezzi focaccia in franchi svizzeri">
+                        <thead>
+                          <tr>
+                            <th scope="col">Taglia</th>
+                            <th scope="col">CHF</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><span class="size-icon icon-full" aria-hidden="true"></span>Intera</td>
+                            <td>9.–</td>
+                          </tr>
+                          <tr>
+                            <td><span class="size-icon icon-half" aria-hidden="true"></span>Mezza</td>
+                            <td>5.–</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="gallery-section container section-spacing" aria-labelledby="galleria">
+          <h2 id="galleria" class="section-title"><span>Galleria</span></h2>
+          <p class="section-intro">
+            Alcune delle nostre pizze in scena, da mangiare sono ancora più buone!
+          </p>
+
+          <div class="gallery-grid">
+            <article class="gallery-card">
+              <div class="gallery-media">
+                <img
+                  src="assets/imgs/Pizza_5.jpeg"
+                  alt="Pizza verde"
+                  loading="lazy"
+                  onerror="this.classList.add('is-hidden'); this.nextElementSibling.classList.remove('is-hidden');"
+                />
+                <div class="gallery-fallback is-hidden" aria-hidden="true">Placeholder pizza 1: 1:1</div>
+              </div>
+              <p class="gallery-caption">Pizza verde</p>
+            </article>
+
+            <article class="gallery-card">
+              <div class="gallery-media">
+                <img
+                  src="assets/imgs/Pizza_6.jpeg"
+                  alt="zizzona"
+                  loading="lazy"
+                  onerror="this.classList.add('is-hidden'); this.nextElementSibling.classList.remove('is-hidden');"
+                />
+                <div class="gallery-fallback is-hidden" aria-hidden="true">Placeholder pizza 2: 1:1</div>
+              </div>
+              <p class="gallery-caption">Zizzona</p>
+            </article>
+
+            <article class="gallery-card">
+              <div class="gallery-media">
+                <img
+                  src="assets/imgs/Pizza_7.jpeg"
+                  alt="Halloween"
+                  loading="lazy"
+                  onerror="this.classList.add('is-hidden'); this.nextElementSibling.classList.remove('is-hidden');"
+                />
+                <div class="gallery-fallback is-hidden" aria-hidden="true">Placeholder pizza 3: 1:1</div>
+              </div>
+              <p class="gallery-caption">Halloween</p>
+            </article>
+
+            <article class="gallery-card">
+              <div class="gallery-media">
+                <img
+                  src="assets/imgs/Pizza_8.jpeg"
+                  alt="zizzona gourmet"
+                  loading="lazy"
+                  onerror="this.classList.add('is-hidden'); this.nextElementSibling.classList.remove('is-hidden');"
+                />
+                <div class="gallery-fallback is-hidden" aria-hidden="true">Placeholder pizza 4: 1:1</div>
+              </div>
+              <p class="gallery-caption">Zizzona gourmet</p>
+            </article>
+
+            <article class="gallery-card">
+              <div class="gallery-media">
+                <img
+                  src="assets/imgs/Pizza_1.jpeg"
+                  alt="prosciutto"
+                  loading="lazy"
+                  onerror="this.classList.add('is-hidden'); this.nextElementSibling.classList.remove('is-hidden');"
+                />
+                <div class="gallery-fallback is-hidden" aria-hidden="true">Placeholder pizza 5: 1:1</div>
+              </div>
+              <p class="gallery-caption">Prosciutto</p>
+            </article>
+
+            <article class="gallery-card">
+              <div class="gallery-media">
+                <img
+                  src="assets/imgs/Pizza_2.jpeg"
+                  alt="margherita"
+                  loading="lazy"
+                  onerror="this.classList.add('is-hidden'); this.nextElementSibling.classList.remove('is-hidden');"
+                />
+                <div class="gallery-fallback is-hidden" aria-hidden="true">Placeholder pizza 6: 1:1</div>
+              </div>
+              <p class="gallery-caption">Margherita</p>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container footer-inner">
+          <p>© 2026 Ponny's Pizza. Tutti i diritti riservati.</p>
+          <div class="social-links" aria-label="Social media">
+            <a href="https://www.instagram.com/ponny_pizza?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" aria-label="Instagram" target="_blank" rel="noopener noreferrer">Instagram</a>
+          </div>
+        </div>
+      </footer>
+
+      <aside class="insta-popup" id="insta-popup" aria-live="polite" aria-label="Invito Instagram">
+        <button class="insta-popup-close" type="button" aria-label="Chiudi popup Instagram">×</button>
+        <p>Seguici su Instagram</p>
+        <a class="insta-popup-btn" href="https://www.instagram.com/ponny_pizza?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">Segui</a>
+      </aside>
+    </div>
+  </body>
+</html>
