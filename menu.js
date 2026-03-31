@@ -129,4 +129,92 @@
       });
     }
   }
+
+  /* Home (index): evidenzia «Galleria» in nav quando la sezione galleria è in vista (scroll o click ancore) */
+  (function initHomeNavScrollState() {
+    const gallerySection = document.querySelector(".gallery-section");
+    if (!gallerySection) {
+      return;
+    }
+
+    const header = document.querySelector(".site-header");
+    const navLinks = document.querySelectorAll(".nav-link");
+    const mobileLinks = document.querySelectorAll(".mobile-nav-link");
+
+    function headerOffset() {
+      return header ? header.getBoundingClientRect().height : 0;
+    }
+
+    function gallerySectionTop() {
+      return gallerySection.getBoundingClientRect().top + window.scrollY;
+    }
+
+    function isGalleryActive() {
+      const y = window.scrollY + headerOffset() + 2;
+      return y >= gallerySectionTop();
+    }
+
+    function applyHomeNavActive() {
+      const gallery = isGalleryActive();
+      navLinks.forEach(function (link) {
+        const href = link.getAttribute("href") || "";
+        const isGalleria = href === "#galleria" || /#galleria$/.test(href);
+        const isMenuHome =
+          href === "index.html" ||
+          href === "./index.html" ||
+          href === "/" ||
+          href === "";
+        link.classList.toggle("active", gallery ? isGalleria : isMenuHome && !href.includes("about"));
+      });
+      mobileLinks.forEach(function (link) {
+        const href = link.getAttribute("href") || "";
+        const isGalleria = href === "#galleria" || /#galleria$/.test(href);
+        const isMenuHome =
+          href === "index.html" ||
+          href === "./index.html" ||
+          href === "/" ||
+          href === "";
+        link.classList.toggle("active", gallery ? isGalleria : isMenuHome && !href.includes("about"));
+      });
+    }
+
+    let ticking = false;
+    function onScrollOrResize() {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(function () {
+          ticking = false;
+          applyHomeNavActive();
+        });
+      }
+    }
+
+    window.addEventListener("scroll", onScrollOrResize, { passive: true });
+    window.addEventListener("resize", onScrollOrResize);
+    window.addEventEventListener("hashchange", applyHomeNavActive);
+
+    document.querySelectorAll('a[href="#galleria"], a[href$="#galleria"]').forEach(function (a) {
+      a.addEventListener("click", function () {
+        requestAnimationFrame(function () {
+          setTimeout(applyHomeNavActive, 450);
+        });
+      });
+    });
+
+    function applyAfterLayout() {
+      applyHomeNavActive();
+      requestAnimationFrame(applyHomeNavActive);
+    }
+
+    if (document.readyState === "complete") {
+      applyAfterLayout();
+      setTimeout(applyHomeNavActive, 120);
+    } else {
+      window.addEventListener("load", function () {
+        applyAfterLayout();
+        setTimeout(applyHomeNavActive, 120);
+      });
+    }
+    applyHomeNavActive();
+  })();
 })();
