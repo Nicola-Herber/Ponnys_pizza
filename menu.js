@@ -1,6 +1,28 @@
 (function () {
   "use strict";
 
+  /* Image loading: shimmer → fade-in */
+  (function initImageLoading() {
+    var containers = document.querySelectorAll(".pizza-menu-visual, .gallery-media");
+    containers.forEach(function (container) {
+      var img = container.querySelector("img");
+      if (!img) return;
+      container.classList.add("img-loading");
+      if (img.complete && img.naturalWidth > 0) {
+        container.classList.remove("img-loading");
+        container.classList.add("img-loaded");
+      } else {
+        img.addEventListener("load", function () {
+          container.classList.remove("img-loading");
+          container.classList.add("img-loaded");
+        });
+        img.addEventListener("error", function () {
+          container.classList.remove("img-loading");
+        });
+      }
+    });
+  })();
+
   const cards = document.querySelectorAll("[data-pizza-flip]");
 
   cards.forEach(function (card) {
@@ -137,21 +159,15 @@
       return;
     }
 
-    const header = document.querySelector(".site-header");
     const navLinks = document.querySelectorAll(".nav-link");
     const mobileLinks = document.querySelectorAll(".mobile-nav-link");
-
-    function headerOffset() {
-      return header ? header.getBoundingClientRect().height : 0;
-    }
 
     function gallerySectionTop() {
       return gallerySection.getBoundingClientRect().top + window.scrollY;
     }
 
     function isGalleryActive() {
-      const y = window.scrollY + headerOffset() + 2;
-      return y >= gallerySectionTop();
+      return window.scrollY + 20 >= gallerySectionTop();
     }
 
     function applyHomeNavActive() {

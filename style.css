@@ -10,8 +10,7 @@
   --wood: #2a211a;
   --line: #3a2f25;
   --shadow: 0 16px 34px rgba(0, 0, 0, 0.42);
-  /* Ancora #galleria: sotto header sticky + 20px (altezza header ≈ padding + max(logo, menu)) */
-  --header-scroll-margin: calc(1.15rem + max(clamp(64px, 16vw, 96px), 50px) + 0.75rem + 20px);
+  --header-scroll-margin: 20px;
   --radius-xl: 28px;
   --radius-lg: 20px;
   --radius-md: 14px;
@@ -165,8 +164,7 @@ img {
 }
 
 .site-header {
-  position: sticky;
-  top: 0;
+  position: relative;
   z-index: 40;
   display: flex;
   flex-wrap: wrap;
@@ -174,12 +172,6 @@ img {
   align-items: center;
   gap: 1rem;
   padding: 1.15rem 0 0.75rem;
-  background: transparent;
-  pointer-events: none;
-}
-
-.site-header > * {
-  pointer-events: auto;
 }
 
 /* Home: solo bordo come il tasto menu (niente sfondo / vetro) */
@@ -763,7 +755,7 @@ tbody tr + tr td {
 }
 
 .gallery-section {
-  min-height: calc(100vh - var(--header-scroll-margin));
+  min-height: 100vh;
 }
 
 .gallery-grid {
@@ -1096,4 +1088,48 @@ button[type="submit"]:focus-visible {
   .placeholder-box {
     min-height: 200px;
   }
+}
+
+/* Shimmer skeleton while images load */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.img-loading {
+  background: linear-gradient(
+    90deg,
+    #191411 0%,
+    #2a211a 40%,
+    #3a2f25 50%,
+    #2a211a 60%,
+    #191411 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.6s ease-in-out infinite;
+}
+
+.pizza-menu-visual.img-loading::before {
+  opacity: 0;
+}
+
+.gallery-media.img-loading {
+  border-radius: 14px;
+  aspect-ratio: 1 / 1;
+}
+
+.img-loading > img,
+.img-loading > .pizza-type-icon-in-photo {
+  opacity: 0;
+}
+
+.img-loaded > img,
+.img-loaded > .pizza-type-icon-in-photo {
+  opacity: 1;
+  transition: opacity 0.35s ease;
+}
+
+.gallery-card .img-loaded > img {
+  opacity: 1;
+  transition: opacity 0.35s ease;
 }
