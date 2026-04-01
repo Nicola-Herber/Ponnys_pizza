@@ -29,9 +29,13 @@
           <div class="logo-placeholder is-hidden" aria-hidden="true">Logo non trovato</div>
         </a>
         <nav class="main-nav" aria-label="Navigazione principale">
-          <a class="nav-link" href="index.html">Il Menù</a>
-          <a class="nav-link" href="index.html#galleria">Galleria</a>
-          <a class="nav-link active" href="about.html">Contattaci</a>
+          <a class="nav-link" href="index.html" data-i18n="nav_menu">Il Menù</a>
+          <a class="nav-link" href="index.html#galleria" data-i18n="nav_gallery">Galleria</a>
+          <a class="nav-link active" href="about.html" data-i18n="nav_contact">Contattaci</a>
+          <span class="lang-divider"></span>
+          <button class="lang-btn active" data-lang="it" type="button">IT</button>
+          <button class="lang-btn" data-lang="en" type="button">EN</button>
+          <button class="lang-btn" data-lang="de" type="button">DE</button>
         </nav>
         <div class="mobile-nav">
           <button
@@ -48,9 +52,14 @@
             </span>
           </button>
           <div class="mobile-nav-popup" id="mobile-nav-popup" role="menu" aria-label="Seleziona pagina">
-            <a class="mobile-nav-link" href="index.html" role="menuitem">Il Menù</a>
-            <a class="mobile-nav-link" href="index.html#galleria" role="menuitem">Galleria</a>
-            <a class="mobile-nav-link active" href="about.html" role="menuitem">Contattaci</a>
+            <a class="mobile-nav-link" href="index.html" role="menuitem" data-i18n="nav_menu">Il Menù</a>
+            <a class="mobile-nav-link" href="index.html#galleria" role="menuitem" data-i18n="nav_gallery">Galleria</a>
+            <a class="mobile-nav-link active" href="about.html" role="menuitem" data-i18n="nav_contact">Contattaci</a>
+            <div class="lang-switch-mobile">
+              <button class="lang-btn active" data-lang="it" type="button">IT</button>
+              <button class="lang-btn" data-lang="en" type="button">EN</button>
+              <button class="lang-btn" data-lang="de" type="button">DE</button>
+            </div>
           </div>
         </div>
       </header>
@@ -58,7 +67,7 @@
       <main>
         <h1 class="visually-hidden">Ponny's Pizza — Il nostro chef</h1>
         <section class="chef-section container section-spacing">
-          <h2 class="section-title"><span>INCONTRA LO CHEF</span></h2>
+          <h2 class="section-title"><span data-i18n="chef_title">INCONTRA LO CHEF</span></h2>
           <div class="chef-layout">
             <div class="chef-image-wrap">
               <img
@@ -75,44 +84,38 @@
             </div>
             <article class="chef-bio">
               <h3>Chef Ponny</h3>
-              <p>
-                Ti é piaciuta la pizza? Stai organizzando la tua festa o vuoi uno chef per una serata tra amici? Contattaci! 
-                Siamo pronti a venire alla tua festa per prepararti la tua pizza preferita! 
-              </p>
-              <p>
-                Tu dicci dove, quando e quante persone ci aspettano e noi pensiamo al resto!
-              </p>
+              <p data-i18n="chef_bio_1">Ti é piaciuta la pizza? Stai organizzando la tua festa o vuoi uno chef per una serata tra amici? Contattaci! Siamo pronti a venire alla tua festa per prepararti la tua pizza preferita!</p>
+              <p data-i18n="chef_bio_2">Tu dicci dove, quando e quante persone ci aspettano e noi pensiamo al resto!</p>
             </article>
           </div>
         </section>
 
         <section class="contact-section container section-spacing">
-          <h2 class="section-title"><span>CONTATTACI PER IL TUO PROSSIMO EVENTO!</span></h2>
+          <h2 class="section-title"><span data-i18n="contact_title">CONTATTACI PER IL TUO PROSSIMO EVENTO!</span></h2>
           <form class="contact-form contact-form--compact" data-mailto-form data-mailto="ponnypizzas@gmail.com">
-            <p class="contact-form-note">
-              Compila e invia: si aprira' la tua app Mail con il messaggio pronto. Ti risponderemo il prima possibile!
-            </p>
+            <p class="contact-form-note" data-i18n="contact_note">Compila e invia: si aprira' la tua app Mail con il messaggio pronto. Ti risponderemo il prima possibile!</p>
 
-            <label for="name">Nome</label>
-            <input id="name" name="name" type="text" placeholder="Il tuo nome" required />
+            <label for="name" data-i18n="label_name">Nome</label>
+            <input id="name" name="name" type="text" placeholder="Il tuo nome" data-i18n-ph="ph_name" required />
 
-            <label for="message">Messaggio</label>
+            <label for="message" data-i18n="label_message">Messaggio</label>
             <textarea
               id="message"
               name="message"
               rows="5"
               placeholder="Raccontaci data, numero ospiti e preferenze..."
+              data-i18n-ph="ph_message"
               required
             ></textarea>
 
-            <button type="submit">Apri Mail e Invia Richiesta</button>
+            <button type="submit" data-i18n="btn_send">Apri Mail e Invia Richiesta</button>
           </form>
         </section>
       </main>
 
       <footer class="site-footer">
         <div class="container footer-inner">
-          <p>© 2026 Ponny's Pizza. Tutti i diritti riservati.</p>
+          <p data-i18n="footer_copy">© 2026 Ponny's Pizza. Tutti i diritti riservati.</p>
           <div class="social-links" aria-label="Social media">
             <a href="https://www.instagram.com/ponny_pizza?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" aria-label="Instagram" target="_blank" rel="noopener noreferrer">Instagram</a>
           </div>

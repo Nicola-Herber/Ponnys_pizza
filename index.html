@@ -29,9 +29,13 @@
           <div class="logo-placeholder is-hidden" aria-hidden="true">Logo non trovato</div>
         </a>
         <nav class="main-nav" aria-label="Navigazione principale">
-          <a class="nav-link active" href="index.html">Il Menù</a>
-          <a class="nav-link" href="#galleria">Galleria</a>
-          <a class="nav-link" href="about.html">Contattaci</a>
+          <a class="nav-link active" href="index.html" data-i18n="nav_menu">Il Menù</a>
+          <a class="nav-link" href="#galleria" data-i18n="nav_gallery">Galleria</a>
+          <a class="nav-link" href="about.html" data-i18n="nav_contact">Contattaci</a>
+          <span class="lang-divider"></span>
+          <button class="lang-btn active" data-lang="it" type="button">IT</button>
+          <button class="lang-btn" data-lang="en" type="button">EN</button>
+          <button class="lang-btn" data-lang="de" type="button">DE</button>
         </nav>
         <div class="mobile-nav">
           <button
@@ -48,9 +52,14 @@
             </span>
           </button>
           <div class="mobile-nav-popup" id="mobile-nav-popup" role="menu" aria-label="Seleziona pagina">
-            <a class="mobile-nav-link active" href="index.html" role="menuitem">Il Menù</a>
-            <a class="mobile-nav-link" href="#galleria" role="menuitem">Galleria</a>
-            <a class="mobile-nav-link" href="about.html" role="menuitem">Contattaci</a>
+            <a class="mobile-nav-link active" href="index.html" role="menuitem" data-i18n="nav_menu">Il Menù</a>
+            <a class="mobile-nav-link" href="#galleria" role="menuitem" data-i18n="nav_gallery">Galleria</a>
+            <a class="mobile-nav-link" href="about.html" role="menuitem" data-i18n="nav_contact">Contattaci</a>
+            <div class="lang-switch-mobile">
+              <button class="lang-btn active" data-lang="it" type="button">IT</button>
+              <button class="lang-btn" data-lang="en" type="button">EN</button>
+              <button class="lang-btn" data-lang="de" type="button">DE</button>
+            </div>
           </div>
         </div>
       </header>
@@ -58,9 +67,8 @@
       <main>
         <h1 class="visually-hidden">Ponny's Pizza</h1>
         <section class="event-menu container section-spacing">
-          <h2 class="section-title"><span>PROVALA, FIDATI!</span></h2>
-          <p class="section-intro">
-            Ecco le nostre pizze per la festa di questa sera! Scegli la tua preferita! </p>
+          <h2 class="section-title"><span data-i18n="hero_title">PROVALA, FIDATI!</span></h2>
+          <p class="section-intro" data-i18n="hero_intro">Ecco le nostre pizze per la festa di questa sera! Scegli la tua preferita!</p>
 
           <div class="pizza-grid">
             <article
@@ -80,8 +88,8 @@
                   >
                     <h3>Margherita</h3>
                     <ul class="ingredient-list">
-                      <li>Mozzarella</li>
-                      <li>Pomodoro</li>
+                      <li data-i18n="ing_mozzarella">Mozzarella</li>
+                      <li data-i18n="ing_pomodoro">Pomodoro</li>
                     </ul>
                   </div>
                   <div class="pizza-flip-face pizza-flip-front">
@@ -104,17 +112,17 @@
                       <table aria-label="Prezzi pizza Margherita in franchi svizzeri">
                         <thead>
                           <tr>
-                            <th scope="col">Taglia</th>
+                            <th scope="col" data-i18n="th_size">Taglia</th>
                             <th scope="col">CHF</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
-                            <td><span class="size-icon icon-full" aria-hidden="true"></span>Intera</td>
+                            <td><span class="size-icon icon-full" aria-hidden="true"></span><span data-i18n="size_full">Intera</span></td>
                             <td>12.–</td>
                           </tr>
                           <tr>
-                            <td><span class="size-icon icon-half" aria-hidden="true"></span>Mezza</td>
+                            <td><span class="size-icon icon-half" aria-hidden="true"></span><span data-i18n="size_half">Mezza</span></td>
                             <td>7.–</td>
                           </tr>
                         </tbody>
@@ -142,9 +150,9 @@
                   >
                     <h3>Prosciutto</h3>
                     <ul class="ingredient-list">
-                      <li>Mozzarella</li>
-                      <li>Pomodoro</li>
-                      <li>Prosciutto</li>
+                      <li data-i18n="ing_mozzarella">Mozzarella</li>
+                      <li data-i18n="ing_pomodoro">Pomodoro</li>
+                      <li data-i18n="ing_prosciutto">Prosciutto</li>
                     </ul>
                   </div>
                   <div class="pizza-flip-face pizza-flip-front">
@@ -167,17 +175,17 @@
                       <table aria-label="Prezzi pizza Prosciutto in franchi svizzeri">
                         <thead>
                           <tr>
-                            <th scope="col">Taglia</th>
+                            <th scope="col" data-i18n="th_size">Taglia</th>
                             <th scope="col">CHF</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
-                            <td><span class="size-icon icon-full" aria-hidden="true"></span>Intera</td>
+                            <td><span class="size-icon icon-full" aria-hidden="true"></span><span data-i18n="size_full">Intera</span></td>
                             <td>14.–</td>
                           </tr>
                           <tr>
-                            <td><span class="size-icon icon-half" aria-hidden="true"></span>Mezza</td>
+                            <td><span class="size-icon icon-half" aria-hidden="true"></span><span data-i18n="size_half">Mezza</span></td>
                             <td>8.–</td>
                           </tr>
                         </tbody>
@@ -205,9 +213,9 @@
                   >
                     <h3>Salamino</h3>
                     <ul class="ingredient-list">
-                      <li>Pomodoro</li>
-                      <li>Mozzarella</li>
-                      <li>Salame piccante</li>
+                      <li data-i18n="ing_pomodoro">Pomodoro</li>
+                      <li data-i18n="ing_mozzarella">Mozzarella</li>
+                      <li data-i18n="ing_salame">Salame piccante</li>
                     </ul>
                   </div>
                   <div class="pizza-flip-face pizza-flip-front">
@@ -230,17 +238,17 @@
                       <table aria-label="Prezzi pizza Salamino in franchi svizzeri">
                         <thead>
                           <tr>
-                            <th scope="col">Taglia</th>
+                            <th scope="col" data-i18n="th_size">Taglia</th>
                             <th scope="col">CHF</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
-                            <td><span class="size-icon icon-full" aria-hidden="true"></span>Intera</td>
+                            <td><span class="size-icon icon-full" aria-hidden="true"></span><span data-i18n="size_full">Intera</span></td>
                             <td>14.–</td>
                           </tr>
                           <tr>
-                            <td><span class="size-icon icon-half" aria-hidden="true"></span>Mezza</td>
+                            <td><span class="size-icon icon-half" aria-hidden="true"></span><span data-i18n="size_half">Mezza</span></td>
                             <td>8.–</td>
                           </tr>
                         </tbody>
@@ -268,7 +276,7 @@
                   >
                     <h3>Marinara</h3>
                     <ul class="ingredient-list">
-                      <li>Pomodoro</li>
+                      <li data-i18n="ing_pomodoro">Pomodoro</li>
                     </ul>
                   </div>
                   <div class="pizza-flip-face pizza-flip-front">
@@ -290,17 +298,17 @@
                       <table aria-label="Prezzi pizza Marinara in franchi svizzeri">
                         <thead>
                           <tr>
-                            <th scope="col">Taglia</th>
+                            <th scope="col" data-i18n="th_size">Taglia</th>
                             <th scope="col">CHF</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
-                            <td><span class="size-icon icon-full" aria-hidden="true"></span>Intera</td>
+                            <td><span class="size-icon icon-full" aria-hidden="true"></span><span data-i18n="size_full">Intera</span></td>
                             <td>10.–</td>
                           </tr>
                           <tr>
-                            <td><span class="size-icon icon-half" aria-hidden="true"></span>Mezza</td>
+                            <td><span class="size-icon icon-half" aria-hidden="true"></span><span data-i18n="size_half">Mezza</span></td>
                             <td>5.–</td>
                           </tr>
                         </tbody>
@@ -328,8 +336,8 @@
                   >
                     <h3>Focaccia</h3>
                     <ul class="ingredient-list">
-                      <li>Olio</li>
-                      <li>Sale</li>
+                      <li data-i18n="ing_olio">Olio</li>
+                      <li data-i18n="ing_sale">Sale</li>
                     </ul>
                   </div>
                   <div class="pizza-flip-face pizza-flip-front">
@@ -351,17 +359,17 @@
                       <table aria-label="Prezzi focaccia in franchi svizzeri">
                         <thead>
                           <tr>
-                            <th scope="col">Taglia</th>
+                            <th scope="col" data-i18n="th_size">Taglia</th>
                             <th scope="col">CHF</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
-                            <td><span class="size-icon icon-full" aria-hidden="true"></span>Intera</td>
+                            <td><span class="size-icon icon-full" aria-hidden="true"></span><span data-i18n="size_full">Intera</span></td>
                             <td>9.–</td>
                           </tr>
                           <tr>
-                            <td><span class="size-icon icon-half" aria-hidden="true"></span>Mezza</td>
+                            <td><span class="size-icon icon-half" aria-hidden="true"></span><span data-i18n="size_half">Mezza</span></td>
                             <td>5.–</td>
                           </tr>
                         </tbody>
@@ -389,7 +397,7 @@
                   >
                     <h3>Nutella</h3>
                     <ul class="ingredient-list">
-                      <li>Nutella</li>
+                      <li data-i18n="ing_nutella">Nutella</li>
                     </ul>
                   </div>
                   <div class="pizza-flip-face pizza-flip-front">
@@ -412,13 +420,13 @@
                       <table aria-label="Prezzi pizza Nutella in franchi svizzeri">
                         <thead>
                           <tr>
-                            <th scope="col">Taglia</th>
+                            <th scope="col" data-i18n="th_size">Taglia</th>
                             <th scope="col">CHF</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
-                            <td><span class="size-icon icon-slice" aria-hidden="true"></span>Fetta</td>
+                            <td><span class="size-icon icon-slice" aria-hidden="true"></span><span data-i18n="size_slice">Fetta</span></td>
                             <td>4.–</td>
                           </tr>
                         </tbody>
@@ -432,10 +440,8 @@
         </section>
 
         <section class="gallery-section container section-spacing" aria-labelledby="galleria">
-          <h2 id="galleria" class="section-title"><span>Galleria</span></h2>
-          <p class="section-intro">
-            Alcune delle nostre pizze in scena, da mangiare sono ancora più buone!
-          </p>
+          <h2 id="galleria" class="section-title"><span data-i18n="gallery_title">Galleria</span></h2>
+          <p class="section-intro" data-i18n="gallery_intro">Alcune delle nostre pizze in scena, da mangiare sono ancora più buone!</p>
 
           <div class="gallery-grid">
             <article class="gallery-card">
@@ -521,7 +527,7 @@
 
       <footer class="site-footer">
         <div class="container footer-inner">
-          <p>© 2026 Ponny's Pizza. Tutti i diritti riservati.</p>
+          <p data-i18n="footer_copy">© 2026 Ponny's Pizza. Tutti i diritti riservati.</p>
           <div class="social-links" aria-label="Social media">
             <a href="https://www.instagram.com/ponny_pizza?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" aria-label="Instagram" target="_blank" rel="noopener noreferrer">Instagram</a>
           </div>
@@ -530,8 +536,8 @@
 
       <aside class="insta-popup" id="insta-popup" aria-live="polite" aria-label="Invito Instagram">
         <button class="insta-popup-close" type="button" aria-label="Chiudi popup Instagram">×</button>
-        <p>Seguici su Instagram</p>
-        <a class="insta-popup-btn" href="https://www.instagram.com/ponny_pizza?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">Segui</a>
+        <p data-i18n="insta_text">Seguici su Instagram</p>
+        <a class="insta-popup-btn" href="https://www.instagram.com/ponny_pizza?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" data-i18n="insta_follow">Segui</a>
       </aside>
     </div>
   </body>
